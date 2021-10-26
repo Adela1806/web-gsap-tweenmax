@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*z index*/
+@import url("https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap");
 :root {
   --z-back: -10;
   --z-normal: 1;
@@ -92,6 +93,29 @@ img {
   height: auto;
 }
 
+.body {
+  margin: 3rem 0 0 0;
+  font-family: var(--body-font);
+  font-weight: initial;
+  overflow: hidden;
+}
+
+.bd-grid {
+  max-width: 1200px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  z-index: var(--z-fixed);
+}
+
 .nav {
   height: 3rem;
   display: -webkit-box;
@@ -141,6 +165,7 @@ img {
 
 .nav__toggle {
   font-size: 2rem;
+  display: block;
   cursor: pointer;
 }
 
@@ -158,14 +183,14 @@ img {
     margin: 0;
   }
   .l-header {
-    background-color: rgba(1, 10, 67, 0.8);
+    background-color: transparent;
+    position: fixed;
   }
   .nav {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 3fr 4fr 1fr;
         grid-template-columns: 3fr 4fr 1fr;
-    padding: 0 2rem;
   }
   .nav__list {
     display: -webkit-box;
@@ -178,9 +203,6 @@ img {
   }
   .nav__toggle {
     display: none;
-  }
-  .nav__icon--cart {
-    color: var(--white-color);
   }
 }
 
