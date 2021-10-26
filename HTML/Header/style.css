@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/*z index*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/*z index*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/*Colores*/
+:root {
+  --first-color: #010a43;
+  --second-color: #ffc2c2;
+  --white-color: #fff;
+}
+
+:root {
+  --body-font: "Tinos", serif;
+  --h1-font-size: 2.8rem;
+  --h2-font-size: 2.5rem;
+  --normal-font-size: 1rem;
+  --big-font-size: 5rem;
+  --smaller-font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --h1-font-size: 4.5rem;
+    --h2-font-size: 3.5rem;
+    --normal-font-size: 1.2rem;
+    --big-font-size: 10rem;
+    --smaller-font-size: 0.85rem;
+  }
+}
+
+p {
+  font-size: var(--normal-font-size);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*  chiều dài element bao gom border */
+}
+
+/* // Xóa dấu gạch chân bên dưới */
+a {
+  text-decoration: none;
+}
+
+/* // Bỏ cái kí tự trong link */
+ol,
+ul {
+  list-style: none;
+}
+
+/* // Đường dẫn thì để bàn tay */
+input {
+  border: none;
+  /* // Bo border cho input */
+  outline: none;
+  /* // Bo border cho input khi click mouse */
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: initial;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 3rem;
+    left: -100%;
+    background-color: rgba(1, 10, 67, 0.8);
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    padding: 2rem;
+    z-index: var(--z-fixed);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+
+.nav__list {
+  text-align: center;
+}
+
+.nav__item {
+  margin-bottom: 2rem;
+}
+
+.nav__link {
+  padding: 0.5rem;
+  color: var(--white-color);
+}
+
+.nav__logo {
+  color: var(--white-color);
+}
+
+.nav__toggle {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav__icon--cart {
+  font-size: 1.3rem;
+  text-align: right;
+}
+
+.show {
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .body {
+    margin: 0;
+  }
+  .l-header {
+    background-color: rgba(1, 10, 67, 0.8);
+  }
+  .nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3fr 4fr 1fr;
+        grid-template-columns: 3fr 4fr 1fr;
+    padding: 0 2rem;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__item {
+    margin-right: 5rem;
+    margin-bottom: 0;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__icon--cart {
+    color: var(--white-color);
+  }
+}
+
+@media (min-width: 1140px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

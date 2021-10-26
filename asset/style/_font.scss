@@ -1,0 +1,30 @@
+@import "variables";
+@import "media";
+
+/*Colores*/
+:root {
+  --first-color: #010a43;
+  --second-color: #ffc2c2;
+  --white-color: #fff;
+}
+
+:root {
+  --body-font: "Tinos", serif;
+  --h1-font-size: 2.8rem;
+  --h2-font-size: 2.5rem;
+  --normal-font-size: 1rem;
+  --big-font-size: 5rem;
+  --smaller-font-size: 0.75rem;
+
+  @include lg() {
+    --h1-font-size: 4.5rem;
+    --h2-font-size: 3.5rem;
+    --normal-font-size: 1.2rem;
+    --big-font-size: 10rem;
+    --smaller-font-size: 0.85rem;
+  }
+}
+
+p {
+  font-size: var(--normal-font-size);
+}
